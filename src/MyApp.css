@@ -1,0 +1,292 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/font/Poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "Poppins light";
+  src: url("assets/font/Poppins/Poppins-Light.ttf");
+}
+body {
+  font-family: "Poppins";
+  background-color: #060606;
+  height: 100%;
+  min-width: 280px;
+  -webkit-touch-callout: none;
+}
+
+html {
+  height: 100%;
+}
+
+.active {
+  color: #fff;
+  position: relative;
+  height: 100%;
+  z-index: 2;
+}
+.active::after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ff4900;
+  z-index: -1;
+  opacity: 0;
+  padding: 3.5rem;
+  -webkit-transform: translate(-27.5%, -150%);
+          transform: translate(-27.5%, -150%);
+}
+.active.yes::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ff4900;
+  z-index: -1;
+  opacity: 1;
+  padding: 3.5rem;
+  -webkit-transform: translate(-27.5%, -45%);
+          transform: translate(-27.5%, -45%);
+}
+
+.helloText {
+  position: relative !important;
+  z-index: 2;
+  background-color: #ff4900;
+  padding: 2% 3%;
+}
+.helloText::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 100%;
+  height: 200%;
+  min-width: 2rem;
+  min-height: 2rem;
+  background-color: #ff4900;
+  z-index: -1;
+  -webkit-transform: translate(-50%, -25%);
+          transform: translate(-50%, -25%);
+  -webkit-clip-path: polygon(48% 44%, 19% 0, 81% 0);
+          clip-path: polygon(48% 44%, 19% 0, 81% 0);
+}
+
+.popins-light {
+  font-family: "Poppins light";
+  opacity: 0.7;
+}
+
+.filter-img {
+  -webkit-filter: drop-shadow(2vw 1vw 0.4vw #000) brightness(0.5) opacity(0.8);
+          filter: drop-shadow(2vw 1vw 0.4vw #000) brightness(0.5) opacity(0.8);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+  width: 100%;
+}
+
+.six {
+  width: 49.2%;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/* ALL */
+.row .three {
+  padding: 80px 30px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  text-align: center;
+}
+
+.hamburger .line {
+  width: 50px;
+  height: 5px;
+  background-color: #ecf0f1;
+  display: block;
+  margin: 8px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+
+#hamburger-6.is-active {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: fixed;
+  right: 2%;
+}
+
+.is-active .line {
+  background-color: #ff4900;
+  -webkit-box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.544);
+          box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.544);
+}
+
+#hamburger-6.is-active .line:nth-child(2) {
+  width: 0px;
+}
+
+#hamburger-6.is-active .line:nth-child(1),
+#hamburger-6.is-active .line:nth-child(3) {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+#hamburger-6.is-active .line:nth-child(1) {
+  -webkit-transform: translateY(13px);
+  transform: translateY(13px);
+}
+
+#hamburger-6.is-active .line:nth-child(3) {
+  -webkit-transform: translateY(-13px) rotate(90deg);
+  transform: translateY(-13px) rotate(90deg);
+}
+
+.My-Menu {
+  -webkit-clip-path: polygon(45% 0, 100% 0%, 57% 100%, 0% 100%);
+          clip-path: polygon(45% 0, 100% 0%, 57% 100%, 0% 100%);
+  background-color: rgba(224, 64, 0, 0.8745098039);
+}
+
+.MenuLinks {
+  display: grid;
+  place-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  min-height: 100vh;
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+  -ms-touch-action: none;
+      touch-action: none;
+}
+.MenuLinks * {
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+}
+
+@media screen and (max-width: 460px) {
+  .MenuLinks {
+    -webkit-transform: rotate(13deg);
+            transform: rotate(13deg);
+  }
+  .MenuLinks * {
+    -webkit-transform: rotate(-13deg);
+            transform: rotate(-13deg);
+  }
+}
+@media screen and (max-width: 767px) {
+  .active {
+    color: #fff;
+    position: relative;
+    height: 100%;
+    z-index: 2;
+  }
+  .active::after {
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1%;
+    background-color: #ff4900;
+    z-index: -1;
+    opacity: 0;
+    padding: 0;
+  }
+  .active.yes::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2%;
+    background-color: #ffffff;
+    z-index: -1;
+    opacity: 1;
+    padding: 0;
+    -webkit-transform: translate(0%, -15%);
+            transform: translate(0%, -15%);
+  }
+}
+.arrowScrollDownAnimation {
+  -webkit-animation: arrowScrollDownAnimation 3s ease-in-out infinite;
+          animation: arrowScrollDownAnimation 3s ease-in-out infinite;
+}
+
+@-webkit-keyframes arrowScrollDownAnimation {
+  0% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translate(-50%, 150%);
+            transform: translate(-50%, 150%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%, 150%);
+            transform: translate(-50%, 150%);
+    opacity: 0;
+  }
+}
+
+@keyframes arrowScrollDownAnimation {
+  0% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translate(-50%, 150%);
+            transform: translate(-50%, 150%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%, 150%);
+            transform: translate(-50%, 150%);
+    opacity: 0;
+  }
+}/*# sourceMappingURL=MyApp.css.map */
