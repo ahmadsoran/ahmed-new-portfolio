@@ -25,9 +25,9 @@ function Navbar() {
                             onClick={openNavHandler}
                             children={
                                 <div className="text-white md:text-1xl sm:text-xl text-md MenuLinks">
-                                    <MyLinks to="/" >Home</MyLinks>
-                                    <MyLinks to="/about" >About</MyLinks>
-                                    <MyLinks to="/projects" >Projects</MyLinks>
+                                    <MyLinks to="#" >Home</MyLinks>
+                                    <MyLinks to="#about" >About</MyLinks>
+                                    <MyLinks to="#projects" >Projects</MyLinks>
 
                                     <Button sx={{
                                         backgroundColor: '#ff4900',
@@ -48,9 +48,9 @@ function Navbar() {
             </AnimatePresence>
 
             <div className="w-2/3  justify-evenly text-white items-center hidden md:flex">
-                <MyLinks to="/" >Home</MyLinks>
-                <MyLinks to="/about" >About</MyLinks>
-                <MyLinks to="/projects" >Projects</MyLinks>
+                <MyLinks to="#" >Home</MyLinks>
+                <MyLinks to="#about" >About</MyLinks>
+                <MyLinks to="#projects" >Projects</MyLinks>
 
                 <Button sx={{
                     backgroundColor: '#ff4900',
