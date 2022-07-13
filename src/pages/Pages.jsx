@@ -1,16 +1,24 @@
 import { motion } from 'framer-motion';
 import About from './about/about';
+import HireSection from './hire/HireSection';
 import Home from './home/Home';
+import Projects from './projects/Projects';
 function Pages() {
     return (
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="p-5"
+
         >
-            <Home />
-            <About />
+            <div className="p-5">
+                <Home />
+                <About />
+            </div>
+            <Projects />
+            <HireSection />
+
+
         </motion.div>
     )
 }

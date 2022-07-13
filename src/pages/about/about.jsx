@@ -26,6 +26,7 @@ export default function About() {
         'Express',
         'MongoDB',
         'Backend Libraries (Auth, Validation ...)',
+        'Swagger Documentation',
         'Adobe Photoshop',
     ]
     const yearsOfExperience = new Date().getFullYear() - 2020;
@@ -56,10 +57,10 @@ export default function About() {
                 <h1 className='text-lg md:text-1xl lg:text-2xl xl:text-4xl text-white font-bold'>
                     About Me
                 </h1>
-                <p className='text-xs sm:text-sm md:text-md lg:text-lg text-white break-words poppins-light'>
+                <p className='text-xs sm:text-sm md:text-md lg:text-lg p-2 text-white break-words poppins-light'>
                     My name is Ahmed Soran Majeed. I am a full-stack web & app developer. I have a passion for creating beautiful and functional web & app.
                 </p>
-                <h1 className='text-lg md:text-1xl my-2 lg:text-2xl xl:text-4xl text-white text-center font-bold'>
+                <h1 className='text-lg md:text-1xl my-2 lg:text-2xl xl:text-4xl text-white  font-bold'>
                     Skills
                 </h1>
                 <div className="p-2">
