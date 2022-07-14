@@ -503,6 +503,8 @@ img {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
+  -webkit-box-shadow: 0 -5px 9px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 -5px 9px rgba(0, 0, 0, 0.4);
 }
 
 .hire-bg {
@@ -515,4 +517,33 @@ img {
 
 .hire-sec {
   min-height: 60vh;
+}
+
+.anim-section {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.anim-section.animate {
+  opacity: 1;
+}
+
+.nv-anim {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-box-shadow: 0 5px 9px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 9px rgba(0, 0, 0, 0.2);
+}
+.nv-anim.animate-nv {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.transition0 {
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }/*# sourceMappingURL=MyApp.css.map */

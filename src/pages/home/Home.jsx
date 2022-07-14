@@ -5,15 +5,19 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import { useInView } from 'react-intersection-observer';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import useStore from '../../feature/NavFixedSlice';
 function Home() {
     const { ref, inView } = useInView({
         threshold: 0.5,
     });
+    const setPosition = useStore((state) => state.setPosition)
+
     const navigate = useNavigate();
     useEffect(() => {
         if (inView) {
 
             navigate('#');
+            setPosition(false)
         }
     }, [inView])  // eslint-disable-line
     return (
@@ -32,8 +36,8 @@ function Home() {
                                 sx={{
                                     backgroundColor: '#ff4900', color: '#fff', mr: 3,
                                     fontSize: 'clamp(.9rem, 2vw, 1rem)',
-                                    padding: '2% 5%',
-                                    "&:hover": { backgroundColor: '#ff4900' }
+                                    outline: 'solid 1px #ff4800f3',
+                                    "&:hover": { backgroundColor: '#ff4900', outline: 'none' }
                                 }}
                                 className="text-9xl"
                                 href="https://drive.google.com/file/d/1xnGa72tBljLLevn2S49u_INQY3SGmh_Z/view?usp=sharing"
@@ -42,7 +46,6 @@ function Home() {
                             >Download CV</Button>
                             <Button sx={{
                                 fontSize: 'clamp(.9rem, 2vw, 1rem)',
-                                padding: '2% 5%',
                                 backgroundColor: '#000', outline: 'solid 1px white', color: '#fff', "&:hover": { backgroundColor: '#ff4900', outline: 'none' }
                             }}
                                 href='#projects'

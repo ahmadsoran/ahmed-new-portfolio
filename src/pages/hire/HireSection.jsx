@@ -8,13 +8,12 @@ export default function HireSection() {
                     have a project in Mind?
                 </h4>
                 <h1 className="text-white text-md sm:text-xl my-5 sm:text-1xl lg:text-2xl xl:text-3xl font-bold">
-                    i'm available for freelancing
+                    i'm available for freelancing or full-time
                 </h1>
                 <Button
                     sx={{
                         backgroundColor: '#ff4900', color: '#fff', mr: 3,
                         fontSize: 'clamp(.9rem, 2vw, 1rem)',
-                        padding: '1% 3%',
                         marginTop: '3%',
                         "&:hover": { backgroundColor: '#ff4900' }
                     }}

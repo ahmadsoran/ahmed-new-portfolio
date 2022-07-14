@@ -2,14 +2,17 @@ import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useNavigate } from 'react-router-dom';
 import devIMg from '../../assets/img/dev.jpg';
+import useStore from '../../feature/NavFixedSlice';
 export default function About() {
     const { ref, inView } = useInView({
         threshold: 0.3,
     });
     const navigate = useNavigate();
+    const setPosition = useStore((state) => state.setPosition)
     useEffect(() => {
         if (inView) {
             navigate('#about');
+            setPosition(true)
         }
     }, [inView]) // eslint-disable-line
     const skillsList = [
@@ -30,6 +33,7 @@ export default function About() {
         'Adobe Photoshop',
     ]
     const yearsOfExperience = new Date().getFullYear() - 2020;
+
 
     return (
         <section ref={ref} className=' grid grid-cols-1 md:grid-cols-2 justify-center bg-neutral-900 rounded-lg overflow-hidden' id='about'>

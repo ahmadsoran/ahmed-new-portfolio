@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import About from './about/about';
+import Contact from './contact/contact';
 import HireSection from './hire/HireSection';
 import Home from './home/Home';
 import Projects from './projects/Projects';
@@ -17,7 +18,7 @@ function Pages() {
             </div>
             <Projects />
             <HireSection />
-
+            <Contact />
 
         </motion.div>
     )

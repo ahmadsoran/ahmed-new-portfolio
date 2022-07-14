@@ -461,6 +461,7 @@ img {
   .card-detail {
     transform: translateY(0);
     opacity: 1;
+    box-shadow: 0 -5px 9px rgba(0, 0, 0, 0.4);
 
   }
 }
@@ -475,4 +476,29 @@ img {
 
 .hire-sec {
   min-height: 60vh;
+}
+
+.anim-section {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+
+  &.animate {
+    opacity: 1;
+  }
+}
+
+.nv-anim {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-100%);
+  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.2);
+
+  &.animate-nv {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.transition0 {
+  transition: all 0.7s ease-in-out;
 }
