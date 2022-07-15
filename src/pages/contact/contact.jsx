@@ -1,10 +1,12 @@
 import Form from "./Form";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useNavigate } from 'react-router-dom';
 import Social from "./Social";
 import Page from "../../components/Page";
+import { CopyAllTwoTone, DoneTwoTone } from '@mui/icons-material';
 export default function Contact() {
+    const [IsCopy, setIsCopy] = useState(false)
     const { ref, inView } = useInView({
         threshold: 0.3,
     });
@@ -14,6 +16,30 @@ export default function Contact() {
             navigate('#contact');
         }
     }, [inView]) // eslint-disable-line
+    useEffect(() => {
+        if (IsCopy) {
+            var timeOutCopy = setTimeout(() => {
+                setIsCopy(false)
+            }, 2000)
+        }
+        return () => {
+            clearTimeout(timeOutCopy)
+        }
+    }, [IsCopy]) // eslint-disable-line
+    const copyToClipboard = (e) => {
+        e.preventDefault();
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText('ahmadsorann1@gmail.com').then(() => {
+                setIsCopy(true)
+            })
+        } else {
+            const myEmail = document.getElementById('my-email');
+            myEmail.select();
+            if (document.execCommand('copy')) {
+                setIsCopy(true)
+            }
+        }
+    }
     return (
         <Page title="Ahmed Soran | ئەحمەد سۆران" meta={
             <>
@@ -38,6 +64,22 @@ export default function Contact() {
                 <p className="poppins-light text-white text-center text-md  sm:text-lg lg:text-xl xl:text-1xl">
                     Please provide your job or project details and I will get back to you as soon as possible.
                 </p>
+                <div onClick={copyToClipboard} className="flex justify-center item-center mt-5 cursor-pointer">
+                    {
+                        navigator.clipboard ?
+                            <h4 className="text-white text-center text-md  sm:text-lg lg:text-xl xl:text-1xl font-bold">
+                                ahmadsorann1@gmail.com
+                            </h4> :
+                            <input disabled id="my-email" className="text-white text-center text-md copy-inp sm:text-lg lg:text-xl xl:text-1xl font-bold" type="text" value='ahmadsorann1@gmail.com' placeholder="ahmadsorann1@gmail.com" />
+
+                    }
+
+                    {
+                        IsCopy ? <DoneTwoTone className="text-green-500 text-center text-md  sm:text-lg lg:text-xl xl:text-1xl  mx-2" />
+                            :
+                            <CopyAllTwoTone className="text-white text-center text-md  sm:text-lg lg:text-xl xl:text-1xl mx-2" />
+                    }
+                </div>
                 <Form />
                 <Social />
                 <p className=" text-white text-xs md:text-sm lg:text-md text-center poppins-light">
