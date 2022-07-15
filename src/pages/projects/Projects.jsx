@@ -1,21 +1,29 @@
 import { useInView } from 'react-intersection-observer';
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import WaveSvg from '../../components/WaveSvg';
 import ProjextCards from './Projext-cards';
 import { MyProjects } from '../../app/My-Projects';
 import ProjectModal from './ProjectModal';
 import Page from '../../components/Page';
+import { Button } from '@mui/material';
 export default function Projects() {
     const { ref, inView } = useInView({
         threshold: 0.3,
     });
+    const [ViewMore, setViewMore] = useState(6)
     const navigate = useNavigate();
     useEffect(() => {
         if (inView) {
             navigate('#projects');
         }
     }, [inView]) // eslint-disable-line
+    const handleViewMore = () => {
+        if (ViewMore < MyProjects.length) {
+            setViewMore(ViewMore + 2)
+        }
+
+    }
     return (
         <Page title="Ahmed Soran | ئەحمەد سۆران" meta={
             <>
@@ -41,7 +49,7 @@ export default function Projects() {
                     <h1 className='text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-center font-semibold'>Projects</h1>
                     <div className='grid mt-10 mb-3 grid-cols-1 items-stretch sm:grid-cols-2 md:grid-cols-3 gap-3'>
 
-                        {MyProjects.map((project) => {
+                        {MyProjects.slice(0, ViewMore).map((project) => {
                             return <ProjextCards
                                 key={project.id}
                                 id={project.id}
@@ -52,6 +60,25 @@ export default function Projects() {
                             />
                         }
                         )}
+                    </div>
+                    <div className="w-full grid p-2 justify-center items-center">
+                        {
+                            ViewMore < MyProjects.length && (
+
+                                <Button sx={{
+                                    backgroundColor: '#ff4900', color: '#fff',
+                                    fontSize: 'clamp(.9rem, 2vw, 1rem)',
+                                    borderRadius: '999px',
+                                    "&:hover": { backgroundColor: '#ff804e' }
+                                }}
+                                    onClick={handleViewMore}
+                                    variant="contained" >
+                                    View {
+                                        MyProjects.length - ViewMore > 0 ? `${MyProjects.length - ViewMore}` : ''
+                                    } more
+                                </Button>
+                            )
+                        }
                     </div>
                 </div>
                 <ProjectModal />

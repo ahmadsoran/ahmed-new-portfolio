@@ -51,20 +51,24 @@ export default function ProjectModal() {
                             open={project ? true : false}
                             onClose={backToProjects}
                             sx={{
-                                display: 'flex',
-                                flexDirection: 'column',
+                                display: 'grid',
                                 alignItems: 'center',
                                 justifyContent: 'center',
                                 padding: '2%',
                                 touchAction: 'none',
 
+
                             }}
 
                         >
 
-                            <div className="w-full h-full border-none focus-visible:outline-none " >
+                            <div className="w-full h-full border-none focus-visible:outline-none touch-none " >
                                 <motion.div
-                                    initial={{ opacity: 0, y: 200 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -100 }}
+                                    initial={{ opacity: 0, y: 200 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 100 }}
+                                    style={{
+                                        borderRadius: '10px',
+                                        overflow: 'hidden',
+                                    }}
                                 >
                                     <div className="bg-neutral-900 w-full proj-modal relative" >
                                         <IconButton
@@ -130,7 +134,7 @@ export default function ProjectModal() {
                                             <h1 className="text-sm sm:text-md md:text-lg my-4 lg:text-xl xl:text-1xl text-white poppins-light break-all">
                                                 {project?.longDescription}
                                             </h1>
-                                            <div className="grid grid-cols-3 place-items-center md:grid-cols-4 lg:grid-cols-5 gap-3">
+                                            <div className="grid grid-cols-2 place-items-center md:grid-cols-3 lg:grid-cols-4 gap-3">
 
 
                                                 {
