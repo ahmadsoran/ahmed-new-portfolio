@@ -1,8 +1,34 @@
 import errimg from '../assets/img/404.svg';
 import { Button } from '@mui/material'
+import { Helmet } from 'react-helmet-async';
+
 function PAGE404() {
+    const url = window.location.href;
+
     return (
         <main className="bg-white relative overflow-hidden h-screen ">
+            <Helmet>
+                <title>404 - Page Not Found</title>
+                <link rel="icon" href="%PUBLIC_URL%/404.png" />
+                <link rel="apple-touch-icon" href="%PUBLIC_URL%/404.png" />
+                <meta name="title" content="404 - Page Not Found" />
+                <meta name="description"
+                    content="404 - Page Not Found" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={url} />
+                <meta property="og:title" content="404 - Page Not Found" />
+                <meta property="og:description"
+                    content="404 - Page Not Found" />
+                <meta property="og:image" content="%PUBLIC_URL%/404.png" />
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content={url} />
+                <meta property="twitter:title" content="404 - Page Not Found" />
+                <meta property=" twitter:description"
+                    content="404 - Page Not Found" />
+                <meta property="twitter:image" content="%PUBLIC_URL%/404.png" />
+
+
+            </Helmet>
             <div className="container mx-auto h-screen pt-32 md:pt-0 px-6 z-10 flex items-center justify-between">
                 <div className="container mx-auto px-6 flex flex-col-reverse lg:flex-row justify-between items-center relative">
                     <div className="w-full mb-16 md:mb-8 text-center lg:text-left">

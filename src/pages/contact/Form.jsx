@@ -54,6 +54,7 @@ export default function Form() {
                         color: '#ffffffff'
                     }
                 }} id="message" label="Message" variant="outlined" multiline color='warning' rows={4} />
+
                 <div className="text-center">
                     <Button sx={{
                         backgroundColor: '#ff4900', color: '#fff', mr: 3,
@@ -66,7 +67,6 @@ export default function Form() {
                         Send
                     </Button>
                 </div>
-
             </FormControl>
         </form>
     )

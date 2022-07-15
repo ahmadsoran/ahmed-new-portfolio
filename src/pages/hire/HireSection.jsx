@@ -7,7 +7,7 @@ export default function HireSection() {
                 <h4 className="poppins-light text-white text-md  sm:text-lg lg:text-xl xl:text-1xl">
                     have a project in Mind?
                 </h4>
-                <h1 className="text-white text-md sm:text-xl my-5 sm:text-1xl lg:text-2xl xl:text-3xl font-bold">
+                <h1 className="text-white text-center text-md sm:text-xl my-5 sm:text-1xl lg:text-2xl xl:text-3xl font-bold">
                     i'm available for freelancing or full-time
                 </h1>
                 <Button
