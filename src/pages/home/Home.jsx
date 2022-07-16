@@ -27,19 +27,19 @@ function Home() {
         <Page title="Ahmed Soran | ئەحمەد سۆران" meta={
             <>
 
-                <link rel="apple-touch-icon" href={"%PUBLIC_URL%/logo192.png"} />
+                <link rel="apple-touch-icon" href={"/logo192.png"} />
                 <meta name="title" content={"Ahmed Soran | ئەحمەد سۆران"} />
                 <meta name="description" content={"hey, my name is ahmed soran from kurdistan i'm full-stack web & app developer | سڵاو من ناوم ئەحمەد سۆرانە خەڵکی کوردستانم، پەرەپئدەری وێبسایت و ئەپم"} />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={"https://ahmadsoran.com"} />
                 <meta property="og:title" content={"Ahmed Soran | ئەحمەد سۆران"} />
                 <meta property="og:description" content={"hey, my name is ahmed soran from kurdistan i'm full-stack web & app developer | سڵاو من ناوم ئەحمەد سۆرانە خەڵکی کوردستانم، پەرەپئدەری وێبسایت و ئەپم"} />
-                <meta property="og:image" content={"%PUBLIC_URL%/logo192.png"} />
+                <meta property="og:image" content={"/logo192.png"} />
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content={"https://ahmadsoran.com"} />
                 <meta property="twitter:title" content={"Ahmed Soran | ئەحمەد سۆران"} />
                 <meta property=" twitter:description" content={"hey, my name is ahmed soran from kurdistan i'm full-stack web & app developer | سڵاو من ناوم ئەحمەد سۆرانە خەڵکی کوردستانم، پەرەپئدەری وێبسایت و ئەپم"} />
-                <meta property="twitter:image" content={"%PUBLIC_URL%/logo192.png"} />
+                <meta property="twitter:image" content={"/logo192.png"} />
             </>}>
 
             <div ref={ref} className="p4 grid grid-cols-1 md:grid-cols-2 ">

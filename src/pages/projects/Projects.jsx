@@ -27,7 +27,7 @@ export default function Projects() {
         <Page title="Ahmed Soran | ئەحمەد سۆران" meta={
             <>
 
-                <link rel="apple-touch-icon" href={"%PUBLIC_URL%/logo192.png"} />
+                <link rel="apple-touch-icon" href={"/logo192.png"} />
                 <meta name="title" content={"Ahmed Soran | ئەحمەد سۆران"} />
                 <meta name="description" content={"hey, my name is ahmed soran from kurdistan i'm full-stack web & app developer | سڵاو من ناوم ئەحمەد سۆرانە خەڵکی کوردستانم، پەرەپئدەری وێبسایت و ئەپم"} />
                 <meta property="og:type" content="website" />
