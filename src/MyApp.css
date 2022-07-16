@@ -495,8 +495,8 @@ img {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, rgb(255, 72, 0)), to(rgba(255, 72, 0, 0.9192051821)));
   background: linear-gradient(0deg, rgb(255, 72, 0) 30%, rgba(255, 72, 0, 0.9192051821) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff4800", endColorstr="#ff4800", GradientType=1);
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  -webkit-transform: translateY(150%);
+          transform: translateY(150%);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   opacity: 0;
@@ -524,6 +524,10 @@ img {
 .hide-card-detail .card-img {
   -webkit-transform: scale(1) translateY(0);
           transform: scale(1) translateY(0);
+}
+.hide-card-detail .card-detail {
+  -webkit-transform: translateY(150%);
+          transform: translateY(150%);
 }
 
 .hire-bg {
