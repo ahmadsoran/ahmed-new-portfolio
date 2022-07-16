@@ -5,9 +5,13 @@ export default function ProjextCards(props) {
     const setProjectId = GetProjectById((state) => state.setProjectId);
     const mouseEnterHandler = (e) => {
         e.currentTarget.classList.add('show-card-detail')
+        e.currentTarget.classList.remove('hide-card-detail')
+
     }
     const mouseLeaveHandler = (e) => {
         e.currentTarget.classList.remove('show-card-detail')
+        e.currentTarget.classList.add('hide-card-detail')
+
     }
     const navigate = useNavigate();
     const navigateToProject = () => {
@@ -16,7 +20,7 @@ export default function ProjextCards(props) {
     }
 
     return (
-        <div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="rounded-sm relative max-h-64  ">
+        <div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="rounded-sm relative max-h-64 overflow-hidden ">
             <img className='object-cover w-full h-full  card-img' src={props.image} alt={props.title} />
             <div className="absolute flex flex-col items-center cursor-pointer p-2 justify-between  bottom-0 left-0 w-full rounded-t-lg card-detail">
                 <div className='text-left w-full px-4'>
