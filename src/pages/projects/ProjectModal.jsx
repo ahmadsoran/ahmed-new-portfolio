@@ -1,18 +1,17 @@
 import { IconButton, Modal } from "@mui/material";
 import { MyProjects } from "../../app/My-Projects";
-import GetProjectById from "../../feature/ProjectByID"
 import { AnimatePresence, motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Clear, GitHub, Web } from '@mui/icons-material';
 import Page from "../../components/Page";
 
 export default function ProjectModal() {
-    const projectId = GetProjectById((state) => state.id);
-    const setProjectId = GetProjectById((state) => state.setProjectId);
+    const param = useParams();
+    const projectId = param.id;
     const project = MyProjects.find((project) => project?.id === projectId);
     const navigate = useNavigate();
+
     const backToProjects = () => {
-        setProjectId(undefined);
         navigate('/#projects');
     }
     const url = window.location.href;

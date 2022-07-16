@@ -453,14 +453,13 @@ img {
 }
 
 .proj {
-  overflow: hidden;
-  position: relative;
+  min-height: 35vh;
 }
 
 .card-detail {
   background: rgb(255, 72, 0);
   background: -moz-linear-gradient(0deg, rgba(255, 72, 0, 1) 30%, rgba(255, 72, 0, 0.9192051820728291) 100%);
-  background: -webkit-linear-gradient(0deg, rgba(255, 72, 0, 1) 30%, rgba(255, 72, 0, 0.9192051820728291) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(255, 72, 0, 1) 30%, rgba(66, 51, 46, 0.919) 100%);
   background: linear-gradient(0deg, rgba(255, 72, 0, 1) 30%, rgba(255, 72, 0, 0.9192051820728291) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff4800", endColorstr="#ff4800", GradientType=1);
   transform: translateY(50%);
