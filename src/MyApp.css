@@ -512,12 +512,17 @@ img {
   transition: all 0.3s ease-in-out;
 }
 
-.show-card-detail .card-img {
+.my-transition {
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.show-card-detail:hover .card-img {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
   border-radius: 10px;
 }
-.show-card-detail .card-detail {
+.show-card-detail:hover .card-detail {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;

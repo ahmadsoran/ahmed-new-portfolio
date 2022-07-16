@@ -1,21 +1,14 @@
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 export default function ProjextCards(props) {
-    const mouseEnterHandler = (e) => {
-        e.currentTarget.classList.add('show-card-detail')
-    }
-    const mouseLeaveHandler = (e) => {
-        e.currentTarget.classList.remove('show-card-detail')
 
-
-    }
     const navigate = useNavigate();
     const navigateToProject = () => {
         navigate('/' + props.id);
     }
 
     return (
-        <div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="rounded-sm relative  max-h-64 proj">
+        <div className="rounded-sm relative  max-h-64 proj show-card-detail">
 
             <img className='object-cover absolute top-0 left-0 w-full h-full  card-img' src={props.image} alt={props.title} />
 

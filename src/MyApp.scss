@@ -472,18 +472,25 @@ img {
   transition: all 0.3s ease-in-out;
 }
 
+.my-transition {
+  transition: all .5s linear;
+}
+
 .show-card-detail {
 
-  .card-img {
-    transform: scale(.95);
-    border-radius: 10px;
-  }
+  &:hover {
 
-  .card-detail {
-    transform: translateY(0);
-    opacity: 1;
-    box-shadow: 0 -5px 9px rgba(0, 0, 0, 0.4);
+    .card-img {
+      transform: scale(.95);
+      border-radius: 10px;
+    }
 
+    .card-detail {
+      transform: translateY(0);
+      opacity: 1;
+      box-shadow: 0 -5px 9px rgba(0, 0, 0, 0.4);
+
+    }
   }
 }
 
