@@ -452,6 +452,11 @@ img {
 
 }
 
+.proj {
+  overflow: hidden;
+  position: relative;
+}
+
 .card-detail {
   background: rgb(255, 72, 0);
   background: -moz-linear-gradient(0deg, rgba(255, 72, 0, 1) 30%, rgba(255, 72, 0, 0.9192051820728291) 100%);
@@ -469,6 +474,7 @@ img {
 }
 
 .show-card-detail {
+
   .card-img {
     transform: scale(.95);
     border-radius: 10px;

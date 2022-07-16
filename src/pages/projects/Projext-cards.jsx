@@ -18,7 +18,7 @@ export default function ProjextCards(props) {
     }
 
     return (
-        <div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="rounded-sm relative max-h-64 overflow-hidden ">
+        <div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler} className="rounded-sm  max-h-64 proj">
             <img className='object-cover w-full h-full  card-img' src={props.image} alt={props.title} />
             <div className="absolute flex flex-col items-center cursor-pointer p-2 justify-between  bottom-0 left-0 w-full rounded-t-lg card-detail">
                 <div className='text-left w-full px-4'>

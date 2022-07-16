@@ -490,6 +490,11 @@ img {
   z-index: 2;
 }
 
+.proj {
+  overflow: hidden;
+  position: relative;
+}
+
 .card-detail {
   background: rgb(255, 72, 0);
   background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, rgb(255, 72, 0)), to(rgba(255, 72, 0, 0.9192051821)));
