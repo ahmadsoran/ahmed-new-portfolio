@@ -5,6 +5,7 @@ import HireSection from './hire/HireSection';
 import Home from './home/Home';
 import Projects from './projects/Projects';
 import Navbar from '../components/Navbar';
+import ProjectModal from './projects/ProjectModal';
 function Pages() {
 
     const isFixed = useStore((state) => state.isFixed)
@@ -19,9 +20,9 @@ function Pages() {
                 <About />
             </div>
             <Projects />
+            <ProjectModal />
             <HireSection />
             <Contact />
-
         </>
     )
 }

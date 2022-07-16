@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import WaveSvg from '../../components/WaveSvg';
 import ProjextCards from './Projext-cards';
 import { MyProjects } from '../../app/My-Projects';
-import ProjectModal from './ProjectModal';
 import Page from '../../components/Page';
 import { Button } from '@mui/material';
 export default function Projects() {
@@ -81,7 +80,7 @@ export default function Projects() {
                         }
                     </div>
                 </div>
-                <ProjectModal />
+
                 <WaveSvg down={true} />
             </div>
         </Page>
