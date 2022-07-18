@@ -3,22 +3,22 @@ export default function Social() {
     const social = [
         {
             name: 'twitter',
-            url: 'https://twitter.com/ahmed_portfolio',
+            url: 'https://twitter.com/ahmadsorannn',
             Icon: Twitter
         },
         {
             name: 'facebook',
-            url: 'https://www.facebook.com/ahmed.portfolio',
+            url: 'https://www.facebook.com/ahmadSoranNn',
             Icon: FacebookRounded
         },
         {
             name: 'github',
-            url: '',
+            url: 'https://github.com/ahmadsoran',
             Icon: GitHub
         },
         {
             name: 'instagram',
-            url: 'https://www.instagram.com/ahmed_portfolio',
+            url: 'https://www.instagram.com/0x_alkurdi_x0',
             Icon: Instagram
         }
     ]
