@@ -14,7 +14,7 @@ export default function About() {
 
         const timeout = setTimeout(() => {
             if (inView) {
-                navigate('#contact');
+                navigate('#about');
                 setPosition(true)
             }
         }, 200);
