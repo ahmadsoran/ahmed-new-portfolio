@@ -11,10 +11,14 @@ export default function About() {
     const navigate = useNavigate();
     const setPosition = useStore((state) => state.setPosition)
     useEffect(() => {
-        if (inView) {
-            navigate('#about');
-            setPosition(true)
-        }
+
+        const timeout = setTimeout(() => {
+            if (inView) {
+                navigate('#contact');
+                setPosition(true)
+            }
+        }, 200);
+        return () => clearTimeout(timeout);
     }, [inView]) // eslint-disable-line
     const skillsList = [
         'Javascript',

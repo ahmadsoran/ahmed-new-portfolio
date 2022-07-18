@@ -12,9 +12,13 @@ export default function Contact() {
     });
     const navigate = useNavigate();
     useEffect(() => {
-        if (inView) {
-            navigate('#contact');
-        }
+        const timeout = setTimeout(() => {
+            if (inView) {
+                navigate('#contact');
+            }
+        }, 100);
+        return () => clearTimeout(timeout);
+
     }, [inView]) // eslint-disable-line
     useEffect(() => {
         if (IsCopy) {
