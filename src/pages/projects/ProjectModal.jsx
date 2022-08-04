@@ -17,7 +17,7 @@ export default function ProjectModal() {
     const url = window.location.href;
 
     return (
-        <div onClick={backToProjects} className={`w-full h-full border-none focus-visible:outline-none fixed grid my-transition ${project ? 'z-50 opacity-100' : '-z-50 opacity-0'} place-items-center top-0 left-0  bg-neutral-900 bg-opacity-40 touch-none`}  >
+        <div onClick={backToProjects} className={`w-full h-full border-none focus-visible:outline-none fixed px-8 grid my-transition ${project ? 'z-50 opacity-100' : '-z-50 opacity-0'} place-items-center top-0 left-0  bg-neutral-900 bg-opacity-40 touch-none`}  >
             <Page title={project?.title}
                 meta={<>
                     <link rel="apple-touch-icon" href={project?.image} />
