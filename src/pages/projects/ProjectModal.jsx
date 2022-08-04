@@ -71,7 +71,7 @@ export default function ProjectModal() {
                                     </IconButton>
 
                                     <div className="w-full proj-img overflow-hidden relative">
-                                        <img className="w-full h-full object-cover " src={project?.image} alt={project?.title} />
+                                        <img loading="lazy" className="w-full h-full object-cover " src={project?.image} alt={project?.title} />
                                         <div className="absolute felx items-center bottom-3 left-3">
 
                                             {
@@ -125,7 +125,7 @@ export default function ProjectModal() {
 
                                             {
                                                 project?.otherImages?.map((image, i) => {
-                                                    return <img key={i.toString()} className="w-full h-full rounded-lg object-cover" src={image} alt={project?.title} />
+                                                    return <img loading="lazy" key={i.toString()} className="w-full h-full rounded-lg object-cover" src={image} alt={project?.title} />
 
                                                 }
                                                 )

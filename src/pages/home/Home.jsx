@@ -75,7 +75,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="w-full relative">
-                    <img className='filter-img' src={MyImg} alt='ahmed soran || احمد سؤران' />
+                    <img loading='lazy' className='filter-img' src={MyImg} alt='ahmed soran || احمد سؤران' />
                     <a className='absolute select-none w-10 hidden md:block left-0 bottom-0 ' referrerPolicy='no referrer' href='#about'>
                         <img className='w-full' src={scrollDownBorder} alt='scroll down to ahmed portfolio' />
                         <ArrowDownwardIcon className='absolute w-7 top-0 left-1/2 -translate-x-1/2  arrowScrollDownAnimation' color='error' alt='scroll arrow' />
