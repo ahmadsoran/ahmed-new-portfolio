@@ -23,6 +23,7 @@ export default function Form() {
 
                             }
                         }}
+                        disabled={true}
                         id="name" label="Name" variant="outlined" color='warning' />
                     <TextField
                         sx={{
@@ -38,6 +39,9 @@ export default function Form() {
 
                             }
                         }}
+
+                        disabled={true}
+
                         id="email" label="Email" variant="outlined" color='warning' />
                 </div>
 
@@ -53,7 +57,11 @@ export default function Form() {
                     '& textarea': {
                         color: '#ffffffff'
                     }
-                }} id="message" label="Message" variant="outlined" multiline color='warning' rows={4} />
+                }}
+
+                        disabled={true}
+
+ id="message" label="Message" variant="outlined" multiline color='warning' rows={4} />
 
                 <div className="text-center">
                     <Button sx={{
@@ -62,7 +70,11 @@ export default function Form() {
                         marginTop: '3%',
                         borderRadius: '999px',
                         "&:hover": { backgroundColor: '#ff4900' }
+
                     }}
+
+                        disabled={true}
+
                         variant="contained" type="submit">
                         Send
                     </Button>
