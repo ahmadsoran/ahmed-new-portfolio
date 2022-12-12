@@ -21,21 +21,23 @@ export default function About() {
         return () => clearTimeout(timeout);
     }, [inView]) // eslint-disable-line
     const skillsList = [
-        'Javascript',
-        'HTML',
-        'CSS & Sass & css frameworks',
-        'React',
-        'React Native',
+        'HTML , CSS , JS',
+        'SCSS & CSS Frameworks ( tailwind ,  etc...)',
+        'React js',
+        'IOS & Android app ( React Native )',
+        'Next js',
+        'Typescript',
         'State Management (Redux & Toolkit, Zustand ...)',
         'Frontend Libraries (React-router & Designs Librarys ...)',
         'Animations (framer-motion, Gsap ...)',
         'Git',
-        'NodeJS',
-        'Express',
-        'MongoDB',
+        'Node , Express , MongoDB',
         'Backend Libraries (Auth, Validation ...)',
-        'Swagger Documentation',
-        'Adobe Photoshop',
+        'API Documentations',
+        'Cloud Computing',
+        'VPS , SEO , HOSTING , Security',
+        'Payment integration',
+        'Problem solving & Fast Learning'
     ]
     const yearsOfExperience = new Date().getFullYear() - 2020;
 
