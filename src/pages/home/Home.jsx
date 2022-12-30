@@ -60,7 +60,7 @@ function Home() {
                                     "&:hover": { backgroundColor: '#ff4900', outline: 'none' }
                                 }}
                                 className="text-9xl"
-                                href="https://drive.google.com/file/d/1xnGa72tBljLLevn2S49u_INQY3SGmh_Z/view?usp=sharing"
+                                href="https://drive.google.com/file/d/1-0xSTudTSsyWI1VwWwoTze6yDex7CS5Q/view?usp=share_link"
                                 target="_blank"
 
                             >Download CV</Button>
